@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Guizeta - Official Website</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html{
+            scroll-behavior: smooth;
+        }
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #0f1115;
+            color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+
+        /* =========================
+           CABEÇALHO
+        ========================== */
+
+        header{
+            width: 100%;
+            background-color: #090b0f;
+            border-bottom: 1px solid #2b2f38;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .menu{
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            min-height: 80px;
+        }
+
+        .logo{
+            font-size: 26px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            white-space: nowrap;
+        }
+
+        .logo span{
+            color: #d8a93c;
+        }
+
+        nav ul{
+            list-style: none;
+
+            display: flex;
+            gap: 15px;
+        }
+
+        nav a{
+            display: block;
+
+            padding: 10px 20px;
+
+            color: white;
+            text-decoration: none;
+
+            border-radius: 5px;
+
+            transition: 0.3s;
+        }
+
+        nav a:hover{
+            background-color: #d8a93c;
+            color: #111;
+        }
+
+
+        /* =========================
+           HERO
+        ========================== */
+
+        .hero{
+            min-height: 500px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            background:
+            linear-gradient(
+                rgba(0,0,0,0.55),
+                rgba(0,0,0,0.85)
+            ),
+            url("Capa.png")
+            center / cover no-repeat;
+
+            padding: 40px 20px;
+        }
+
+        .hero-content{
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .hero h1{
+            font-size: 64px;
+            letter-spacing: 5px;
+        }
+
+        .hero h2{
+            font-size: 22px;
+            color: #d8a93c;
+
+            margin: 10px 0 20px;
+        }
+
+        .hero p{
+            color: #dddddd;
+            font-size: 18px;
+        }
+
+        .hero-button{
+            display: inline-block;
+
+            margin-top: 30px;
+
+            padding: 13px 30px;
+
+            background-color: #d8a93c;
+            color: #111;
+
+            text-decoration: none;
+            font-weight: bold;
+
+            border-radius: 5px;
+
+            transition: 0.3s;
+        }
+
+        .hero-button:hover{
+            background-color: white;
+        }
+
+
+        /* =========================
+           ESTRUTURA
+        ========================== */
+
+        .container{
+            width: 90%;
+            max-width: 1200px;
+
+            margin: auto;
+        }
+
+        section{
+            padding: 80px 0;
+        }
+
+        .titulo{
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .titulo h2{
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .titulo div{
+            width: 70px;
+            height: 4px;
+
+            background-color: #d8a93c;
+
+            margin: auto;
+        }
+
+
+        /* =========================
+           BIOGRAFIA
+        ========================== */
+
+        .biografia{
+            background-color: #15181e;
+        }
+
+        .biografia-conteudo{
+            display: grid;
+
+            grid-template-columns:
+            repeat(2, 1fr);
+
+            gap: 50px;
+
+            align-items: center;
+        }
+
+        .foto-artista{
+            width: 100%;
+        }
+
+        .foto-artista img{
+            width: 100%;
+
+            aspect-ratio: 1 / 1;
+
+            object-fit: cover;
+
+            border-radius: 10px;
+
+            box-shadow:
+            0 15px 40px
+            rgba(0,0,0,0.4);
+        }
+
+        .texto-biografia h3{
+            font-size: 30px;
+
+            color: #d8a93c;
+
+            margin-bottom: 20px;
+        }
+
+        .texto-biografia p{
+            margin-bottom: 15px;
+
+            color: #cccccc;
+
+            text-align: justify;
+        }
+
+
+        /* =========================
+           DISCOGRAFIA
+        ========================== */
+
+        .discografia{
+            background-color: #0f1115;
+        }
+
+        .musicas{
+            display: grid;
+
+            grid-template-columns:
+            repeat(2, 1fr);
+
+            gap: 25px;
+        }
+
+        .musica{
+            background-color: #1b1f27;
+
+            padding: 25px;
+
+            border-radius: 10px;
+
+            border-left:
+            4px solid #d8a93c;
+
+            box-shadow:
+            0 8px 25px
+            rgba(0,0,0,0.2);
+
+            transition: 0.3s;
+        }
+
+        .musica:hover{
+            transform: translateY(-5px);
+
+            background-color: #212630;
+        }
+
+        .musica h3{
+            margin-bottom: 5px;
+        }
+
+        .musica p{
+            color: #999;
+
+            margin-bottom: 15px;
+        }
+
+        audio{
+            width: 100%;
+            max-width: 100%;
+        }
+
+
+        /* =========================
+           SPOTIFY
+        ========================== */
+
+        .spotify{
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .spotify-button{
+            display: inline-block;
+
+            padding: 13px 30px;
+
+            background-color: #1db954;
+            color: white;
+
+            text-decoration: none;
+            font-weight: bold;
+
+            border-radius: 5px;
+
+            transition: 0.3s;
+        }
+
+        .spotify-button:hover{
+            background-color: #169c46;
+        }
+
+
+        /* =========================
+           VÍDEOS
+        ========================== */
+
+        .videos{
+            background-color: #15181e;
+        }
+
+        .video-grid{
+            display: grid;
+
+            grid-template-columns:
+            repeat(2, 1fr);
+
+            gap: 30px;
+
+            align-items: start;
+        }
+
+        .video-card{
+            background-color: #1b1f27;
+
+            padding: 15px;
+
+            border-radius: 10px;
+
+            overflow: hidden;
+        }
+
+        .video-card video{
+            width: 100%;
+
+            height: auto;
+
+            display: block;
+
+            border-radius: 8px;
+        }
+
+        .video-card h3{
+            margin-top: 15px;
+
+            color: #d8a93c;
+        }
+
+        .video-card p{
+            color: #999;
+        }
+
+
+        /* =========================
+           CONTATOS
+        ========================== */
+
+        .contatos{
+            background-color: #0f1115;
+
+            text-align: center;
+        }
+
+        .contato-box{
+            max-width: 700px;
+
+            margin: auto;
+
+            background-color: #1b1f27;
+
+            padding: 40px;
+
+            border-radius: 10px;
+        }
+
+        .contato-box p{
+            margin: 10px 0;
+
+            color: #cccccc;
+        }
+
+        .contato-box a{
+            color: #d8a93c;
+            text-decoration: none;
+        }
+
+
+        /* =========================
+           RODAPÉ
+        ========================== */
+
+        footer{
+            background-color: #07080b;
+
+            border-top:
+            1px solid #252932;
+
+            padding: 35px 20px;
+
+            text-align: center;
+        }
+
+        footer h3{
+            margin-bottom: 8px;
+        }
+
+        footer span{
+            color: #d8a93c;
+        }
+
+        footer p{
+            color: #777;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           TABLET
+        ========================== */
+
+        @media(max-width: 900px){
+
+            .menu{
+                width: 94%;
+            }
+
+            nav ul{
+                gap: 5px;
+            }
+
+            nav a{
+                padding: 9px 12px;
+            }
+
+            .biografia-conteudo{
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .foto-artista{
+                max-width: 600px;
+                margin: auto;
+            }
+
+            .musicas{
+                grid-template-columns: 1fr;
+            }
+
+            .video-grid{
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        /* =========================
+           CELULAR
+        ========================== */
+
+        @media(max-width: 600px){
+
+            header{
+                position: relative;
+            }
+
+            .menu{
+                width: 100%;
+
+                padding: 20px 15px;
+
+                flex-direction: column;
+
+                gap: 15px;
+            }
+
+            .logo{
+                font-size: 24px;
+            }
+
+            nav{
+                width: 100%;
+            }
+
+            nav ul{
+                width: 100%;
+
+                display: grid;
+
+                grid-template-columns:
+                repeat(2, 1fr);
+
+                gap: 8px;
+            }
+
+            nav li{
+                width: 100%;
+            }
+
+            nav a{
+                width: 100%;
+
+                text-align: center;
+
+                padding: 10px 5px;
+
+                background-color: #15181e;
+
+                font-size: 14px;
+            }
+
+
+            /* HERO */
+
+            .hero{
+                min-height: 600px;
+
+                padding: 50px 20px;
+            }
+
+            .hero h1{
+                font-size: 42px;
+
+                letter-spacing: 4px;
+            }
+
+            .hero h2{
+                font-size: 18px;
+
+                margin: 10px 0 18px;
+            }
+
+            .hero p{
+                font-size: 16px;
+            }
+
+            .hero-button{
+                padding: 12px 25px;
+            }
+
+
+            /* SEÇÕES */
+
+            section{
+                padding: 60px 0;
+            }
+
+            .container{
+                width: 90%;
+            }
+
+            .titulo{
+                margin-bottom: 30px;
+            }
+
+            .titulo h2{
+                font-size: 30px;
+            }
+
+
+            /* BIO */
+
+            .biografia-conteudo{
+                gap: 30px;
+            }
+
+            .texto-biografia h3{
+                font-size: 25px;
+            }
+
+            .texto-biografia p{
+                font-size: 16px;
+
+                text-align: left;
+            }
+
+
+            /* MÚSICAS */
+
+            .musicas{
+                grid-template-columns: 1fr;
+
+                gap: 18px;
+            }
+
+            .musica{
+                padding: 20px;
+            }
+
+            .musica h3{
+                font-size: 22px;
+            }
+
+            .musica p{
+                font-size: 15px;
+            }
+
+
+            /* SPOTIFY */
+
+            .spotify{
+                margin-top: 30px;
+            }
+
+            .spotify-button{
+                width: 100%;
+
+                padding: 13px 15px;
+
+                font-size: 14px;
+            }
+
+
+            /* VÍDEO */
+
+            .video-grid{
+                grid-template-columns: 1fr;
+
+                gap: 20px;
+            }
+
+            .video-card{
+                padding: 10px;
+            }
+
+            .video-card h3{
+                font-size: 22px;
+            }
+
+
+            /* CONTATO */
+
+            .contato-box{
+                padding: 25px 20px;
+            }
+
+            .contato-box h3{
+                font-size: 20px;
+            }
+
+
+            /* RODAPÉ */
+
+            footer{
+                padding: 30px 15px;
+            }
+
+            footer p{
+                font-size: 13px;
+            }
+
+        }
+
+
+        /* =========================
+           CELULARES MUITO PEQUENOS
+        ========================== */
+
+        @media(max-width: 380px){
+
+            .hero h1{
+                font-size: 34px;
+            }
+
+            .hero h2{
+                font-size: 16px;
+            }
+
+            .hero p{
+                font-size: 15px;
+            }
+
+            .titulo h2{
+                font-size: 27px;
+            }
+
+            nav a{
+                font-size: 13px;
+            }
+
+            .musica{
+                padding: 18px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     CABEÇALHO
+========================== -->
+
+<header>
+
+    <div class="menu">
+
+        <div class="logo">
+            GUIZETA
+        </div>
+
+        <nav>
+
+            <ul>
+
+                <li>
+                    <a href="#home">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#discography">
+                        Discography
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#videos">
+                        Videos
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#contacts">
+                        Contacts
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     HOME
+========================== -->
+
+<section
+class="hero"
+id="home">
+
+    <div class="hero-content">
+
+        <h1>GUIZETA</h1>
+
+        <h2>
+            HIP HOP • ROCK • MPB
+        </h2>
+
+        <p>
+            Artista de Recife que traz uma
+            sonoridade própria através de
+            diferentes escolas musicais,
+            tendo o Hip Hop como principal raiz.
+        </p>
+
+        <a
+        href="#discography"
+        class="hero-button">
+
+            OUÇA AGORA
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     BIOGRAFIA
+========================== -->
+
+<section class="biografia">
+
+    <div class="container">
+
+        <div class="titulo">
+
+            <h2>
+                Sobre o Artista
+            </h2>
+
+            <div></div>
+
+        </div>
+
+
+        <div class="biografia-conteudo">
+
+
+            <div class="foto-artista">
+
+                <img
+                src="Guizeta.jpg"
+                alt="Artista Guizeta">
+
+            </div>
+
+
+            <div class="texto-biografia">
+
+                <h3>
+                    Uma sonoridade construída por diferentes influências
+                </h3>
+
+                <p>
+                    Guizeta é um artista e compositor
+                    de 19 anos, morador de Recife,
+                    Pernambuco. Sua identidade musical
+                    é construída a partir de diferentes
+                    escolas musicais, resultando em uma
+                    sonoridade própria e diversificada.
+                </p>
+
+                <p>
+                    O Hip Hop é sua principal raiz,
+                    tendo o Trap como uma de suas
+                    principais referências. Ao mesmo
+                    tempo, o artista possui forte
+                    influência do Rock e da Música
+                    Popular Brasileira (MPB).
+                </p>
+
+                <p>
+                    Seu primeiro projeto é o EP
+                    <strong>
+                    Polução Noturna
+                    </strong>,
+                    composto por 5 faixas dentro da
+                    sonoridade Boombap.
+                </p>
+
+                <p>
+                    Atualmente, Guizeta trabalha em um
+                    álbum de Rock chamado
+                    <strong>
+                    Brook
+                    </strong>,
+                    composto por 9 faixas e previsto
+                    para ser lançado em novembro de 2026.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     DISCOGRAFIA
+========================== -->
+
+<section
+class="discografia"
+id="discography">
+
+    <div class="container">
+
+        <div class="titulo">
+
+            <h2>
+                Discography
+            </h2>
+
+            <div></div>
+
+        </div>
+
+
+        <div class="musicas">
+
+
+            <!-- BOMBGIRL -->
+
+            <article class="musica">
+
+                <h3>
+                    Bomb girl
+                </h3>
+
+                <p>
+                    Álbum: Brook • Rock • 9 faixas
+                </p>
+
+                <audio controls>
+
+                    <source
+                    src="Musica.mp3"
+                    type="audio/mpeg">
+
+                    Seu navegador não suporta áudio.
+
+                </audio>
+
+            </article>
+
+
+            <!-- EP -->
+
+            <article class="musica">
+
+                <h3>
+                    Polução Noturna
+                </h3>
+
+                <p>
+                    EP • Boombap • 5 faixas
+                </p>
+
+            </article>
+
+
+            <!-- ÁLBUM -->
+
+            <article class="musica">
+
+                <h3>
+                    Brook
+                </h3>
+
+                <p>
+                    Álbum de Rock • 9 faixas •
+                    Lançamento em novembro de 2026
+                </p>
+
+            </article>
+
+
+        </div>
+
+
+        <div class="spotify">
+
+            <a
+            href="https://open.spotify.com/artist/3A2wx5MPzfItLXcQOOqtZV?si=R-8PmbJzS1qVYIHeuCOvFg&utm_source=copy-link"
+            target="_blank"
+            class="spotify-button">
+
+                OUÇA GUIZETA NO SPOTIFY
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     VÍDEOS
+========================== -->
+
+<section
+class="videos"
+id="videos">
+
+    <div class="container">
+
+
+        <div class="titulo">
+
+            <h2>
+                Music Video
+            </h2>
+
+            <div></div>
+
+        </div>
+
+
+        <div class="video-grid">
+
+
+            <!-- VÍDEO 1 -->
+
+            <article class="video-card">
+
+                <video
+                controls
+                poster="CapaVideo.png">
+
+                    <source
+                    src="Video.mp4"
+                    type="video/mp4">
+
+                    Seu navegador não suporta vídeo.
+
+                </video>
+
+                <h3>
+                    Só significou pra mim
+                </h3>
+
+                <p>
+                    Faixa do álbum Brook
+                </p>
+
+            </article>
+
+
+            <!-- VÍDEO 2 -->
+
+            <article class="video-card">
+
+                <video
+                controls
+                poster="CapaVideo2.png">
+
+                    <source
+                    src="Video2.mp4"
+                    type="video/mp4">
+
+                    Seu navegador não suporta vídeo.
+
+                </video>
+
+                <h3>
+                    Nada demais
+                </h3>
+
+                <p>
+                    Faixa do álbum Brook
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTATOS
+========================== -->
+
+<section
+class="contatos"
+id="contacts">
+
+    <div class="container">
+
+
+        <div class="titulo">
+
+            <h2>
+                Contacts
+            </h2>
+
+            <div></div>
+
+        </div>
+
+
+        <div class="contato-box">
+
+            <h3>
+                Booking & Management
+            </h3>
+
+            <p>
+                Para shows, entrevistas,
+                parcerias e eventos:
+            </p>
+
+            <p>
+                Instagram:
+                @81d.guizeta
+            </p>
+
+            <p>
+                Spotify:
+                Guizeta
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     RODAPÉ
+========================== -->
+
+<footer>
+
+    <h3>
+        GUIZETA
+    </h3>
+
+    <p>
+        © 2026 Guizeta.
+        Todos os direitos reservados.
+    </p>
+
+    <p>
+        Site fictício desenvolvido para
+        fins educacionais.
+    </p>
+
+</footer>
+
+
+</body>
+</html>
